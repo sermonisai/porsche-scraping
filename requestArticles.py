@@ -14,8 +14,6 @@ articles = soup.find_all('article', 'teaser')
 
 urls = []
 
-
-
 for article in articles:
 	try:
 		date = article.time['datetime']
@@ -34,8 +32,8 @@ for article in articles:
 		
 	except:
 		url = 'None'
-	if month == 6:
-		
-		urls.append(url)
+	if month == 6 :
+		if(url != "#"):
+			urls.append(url)
 
 print(urls)
