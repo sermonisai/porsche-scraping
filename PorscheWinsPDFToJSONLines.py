@@ -43,64 +43,68 @@ def web_scraper(filename):
     text_blocks.pop(13)
     text_blocks.pop(0)
 
+    count = 0
+    for i in range(len(text_blocks)):
+        print(count, "        ", text_blocks[i]["paragraph"])
+        count += 1
 
     # Labeling every paragraph with a header
-    for i in range(1,8):
+    for i in range(1,9):
         text_blocks[i]["heading"] = "Race"
 
-    for i in range(9,11):
+    for i in range(9,12):
         text_blocks[i]["heading"] = "Drivers' comments after the race"
 
-    for i in range(12,13):
+    for i in range(12,14):
         text_blocks[i]["heading"] = "Newsflash"
 
-    for i in range(14,15):
+    for i in range(14,16):
         text_blocks[i]["heading"] = "Interim report 2"
 
-    for i in range(16,18):
+    for i in range(16,19):
         text_blocks[i]["heading"] = "Interim report 1"
 
-    for i in range(19,21):
+    for i in range(19,22):
         text_blocks[i]["heading"] = "Makowiecki and Estre start the 24-hour-race"
     
-    for i in range(23,24):
+    for i in range(23,25):
         text_blocks[i]["heading"] = "Drivers' comments after 16 hours of racing"
 
-    for i in range(25,27):
+    for i in range(25,28):
         text_blocks[i]["heading"] = "Interim report 1"
 
-    for i in range(28,31):
+    for i in range(28,32):
         text_blocks[i]["heading"] = "Makowiecki and Estre start the 24-hour-race"
 
-    for i in range(32,35):
+    for i in range(32,36):
         text_blocks[i]["heading"] = "Drivers' comments on the starting phase"
 
-    for i in range(36,39):
+    for i in range(36,40):
         text_blocks[i]["heading"] = "Hyperbole"
 
-    for i in range(40,41):
+    for i in range(40,42):
         text_blocks[i]["heading"] = "Drivers' impressions of the Hyperbole"
 
-    for i in range(42,44):
+    for i in range(42,45):
         text_blocks[i]["heading"] = "Qualifying"
 
     text_blocks[45]["heading"] = "Drivers' impressions after the qualifying"
 
-    for i in range(46,50):
+    for i in range(46,51):
         text_blocks[i]["heading"] = "Test Day"
 
-    for i in range(51,52):
+    for i in range(51,53):
         text_blocks[i]["heading"] = "Drivers' comments after the pre-test"
 
-    for i in range(53,59):
+    for i in range(53,60):
         text_blocks[i]["heading"] = "The preview"
 
-    for i in range(60,61):
+    for i in range(60,62):
         text_blocks[i]["heading"] = "The Porsche GT Team Drivers"
 
     text_blocks[62]["heading"] = "The customer teams"
 
-    for i in range(63,69):
+    for i in range(63,70):
         text_blocks[i]["heading"] = "Drivers' comments before the race"
 
     # A text block that I forgot to pop earlier
@@ -113,6 +117,6 @@ def web_scraper(filename):
             outfile.write(json.dumps(text_blocks[i]) + "\n")
                 
     
-   
+
 
 web_scraper(sys.argv[1])
