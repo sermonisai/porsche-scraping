@@ -1,9 +1,36 @@
-# Porsche Scrape
+<div align="center">
 
-In this we take PDFs from the Porsche Newsroom and try to extract meaningful data from them in a JSON format. 
+# Scraping of Porsche Newsroom
 
-First is a basic scrape of all the PDFs within the month of July from the first to the 15th, resulting in 25 PDFs.
+## Description
+This script is designed to read the PDF format of Porsche Newsroom articles and processing these articles as JSON Lines documents.
 
-We then use PyMuPDF to extract information from that and convert it into a JSON format. 
+### [Name of script]
+This script retrieves all Newsroom articles in PDF format from June 1st to June 15. This results in 25 PDFs.
+<!---First is a basic scrape of all the PDFs within the month of July from the first to the 15th, resulting in 25 PDFs.--->
 
-Finally we process the PDFs to remove extraneous data to allow for proper usage during the NN training stages, which are next. 
+### [Name of script]
+We then use the PyMuPDF library to extract information from each PDF and convert it into a JSON Lines document.
+
+### [Name of script]
+Finally we process each PDF to remove extraneous data in order to allow for neural embedding of each document.
+<!---Finally we process the PDFs to remove extraneous data to allow for proper usage during the NN training stages, which are next.--->
+
+Each JSON Line consist of the following elements.
+
+```json
+"url": str (required)
+"heading": str (optional - not all paragraphs are under a heading)
+"prompt": str (optional - the question before an answer during an interview)
+"paragraph": str (required)
+```
+
+## How to run
+TBD.
+
+### Contact
+TBD.
+
+### Authors
+George Bennett, Justin Lai, and Ronaldo Santiago Vazquez.
+
