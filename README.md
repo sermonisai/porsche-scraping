@@ -2,6 +2,7 @@
 
 # Scraping of Porsche Newsroom
 
+<div align="left">
 ## Description
 This script is designed to read the PDF format of Porsche Newsroom articles and processing these articles as JSON Lines documents.
 
