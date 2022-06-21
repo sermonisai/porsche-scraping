@@ -23,9 +23,12 @@ def web_scraper(filename):
                     text_blocks.append(dict)  
 
     filename = text_blocks[0]["paragraph"] + ".jsonl"
+    filename = filename.replace("\n", "")
+    filename = filename.replace(":", "")
     
-    with open(filename, "w") as outfile:
-        for i in range(1,len(text_blocks)):
-            outfile.write(json.dumps(text_blocks[i]) + "\n")
+    with jsonlines.open(filename, mode="w") as outfile:
+        for item in text_blocks:
+            outfile.write(json.dumps(item) + "\n")
 
-web_scraper(sys.arv[1])
+file = "Paul_Casey___I_will_have_a_really_good_time.pdf"
+web_scraper(file)
