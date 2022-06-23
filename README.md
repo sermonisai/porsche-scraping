@@ -10,7 +10,7 @@ This script retrieves all Newsroom articles in PDF format from June 1st to June 
 ### [pdfToJSON.py]
 We then use the PyMuPDF library to extract information from each PDF and convert it into a JSON Lines document.
 
-### [Name of Code]
+### [Name of Script]
 Finally we process each PDF to remove extraneous data in order to allow for neural embedding of each document.
 <!---Finally we process the PDFs to remove extraneous data to allow for proper usage during the NN training stages, which are next.--->
 
