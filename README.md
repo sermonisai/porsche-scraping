@@ -28,7 +28,9 @@ TBD.
 
 ### Contact
 Justin Lai, justinlai@ucsb.edu
+
 George Bennett, bennettgc@outlook.com
+
 Ronaldo Santiago Vazquez, rsant057@ucr.edu
 
 ### Authors
