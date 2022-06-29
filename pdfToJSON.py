@@ -1,7 +1,7 @@
 from cgitb import text
 from turtle import clear
 from urllib.request import HTTPDefaultErrorHandler
-import fitz, sys, json, jsonlines
+import fitz, sys, json, jsonlines, os, fnmatch
 
 
 def web_scraper(filename):
@@ -63,4 +63,9 @@ def web_scraper(filename):
     
 
 
-web_scraper(sys.argv[1])
+
+
+for file in os.listdir('pdfs'):
+    if fnmatch.fnmatch(file, '*.pdf'):
+        document = os.path.join('pdfs', file)
+        web_scraper(document)
